@@ -5,6 +5,8 @@ public class Demo {
     } else {
       printLoop(Integer.parseInt(args[0]));
     }
+    int[] e = {1,2,3,4,5};
+    System.out.println(arrToString(e));
   }
   public static void printLoop(int n) {
     for (int i = 1; i <= n; i++) {
@@ -14,4 +16,16 @@ public class Demo {
       System.out.println();
     }
   }
+  public static String arrToString(int[]arr) {
+    String a = "";
+    for (int i = 0; i < arr.length; i++) {
+      a += arr[i];
+      if (i != arr.length - 1) {
+        a += ", ";
+      }
+    }
+    a = "{" + a + "}";
+    return a;
+  }
+
 }
