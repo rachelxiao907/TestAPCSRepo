@@ -5,8 +5,6 @@ public class Demo {
     } else {
       printLoop(Integer.parseInt(args[0]));
     }
-
-    System.out.println(arrayDeepToString(create2DArrayRandomized(5,4,4)));
   }
 
   public static void printLoop(int n) {
