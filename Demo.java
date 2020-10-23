@@ -49,4 +49,16 @@ public class Demo {
     }
     return arr;
   }
+  public static int[][] create2DArrayRandomized(int rows, int cols, int maxValue) {
+    int[][] arr = new int[rows][];
+    for (int i = 0; i < rows; i++) {
+      arr[i] = new int[(int)(Math.random() * (cols + 1))];
+    }
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = 0; j < arr[i].length; i++) {
+        arr[i][j] = (int)(Math.random() * (maxValue + 1));
+      }
+    }
+    return arr;
+  }
 }
