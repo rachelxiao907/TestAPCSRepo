@@ -5,6 +5,8 @@ public class Demo {
     } else {
       printLoop(Integer.parseInt(args[0]));
     }
+
+    System.out.println(arrayDeepToString(create2DArrayRandomized(5,4,4)));
   }
 
   public static void printLoop(int n) {
@@ -55,7 +57,7 @@ public class Demo {
       arr[i] = new int[(int)(Math.random() * (cols + 1))];
     }
     for (int i = 0; i < arr.length; i++) {
-      for (int j = 0; j < arr[i].length; i++) {
+      for (int j = 0; j < arr[i].length; j++) {
         arr[i][j] = (int)(Math.random() * (maxValue + 1));
       }
     }
