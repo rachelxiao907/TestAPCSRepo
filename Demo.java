@@ -5,9 +5,8 @@ public class Demo {
     } else {
       printLoop(Integer.parseInt(args[0]));
     }
-    int[] e = {1,2,3,4,5};
-    System.out.println(arrToString(e));
   }
+
   public static void printLoop(int n) {
     for (int i = 1; i <= n; i++) {
       for(int j = 0; j <= n-i; j++) {
@@ -16,7 +15,8 @@ public class Demo {
       System.out.println();
     }
   }
-  public static String arrToString(int[]arr) {
+
+  public static String arrToString(int[] arr) {
     String a = "";
     for (int i = 0; i < arr.length; i++) {
       a += arr[i];
@@ -28,4 +28,15 @@ public class Demo {
     return a;
   }
 
+  public static String arrayDeepToString (int[][]arr) {
+    String deep = "";
+    for (int i = 0; i < arr.length; i++) {
+      deep += arrToString(arr[i]);
+      if (i != arr.length - 1) {
+        deep += ", ";
+      }
+    }
+    deep = "{" + deep + "}";
+    return deep;
+  }
 }
